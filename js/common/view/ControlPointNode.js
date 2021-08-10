@@ -44,7 +44,7 @@ class ControlPointNode extends Circle {
 
     super( 12, {
       pickable: true,
-      opacity: 0.5,
+      opacity: 0.5, // @zhilin: before dragging the track, the opacity of the red bubble
       stroke: 'black',
       lineWidth: 1,
       fill: fill,
@@ -260,7 +260,7 @@ class ControlPointNode extends Circle {
         }
       };
       inputListener.out = () => {
-        this.opacity = 0.1;
+        this.opacity = 0.1; //@zhilin: if the mouse off the bubble, the opacity is 0.1 --- almost transparent
         this.fill = fill;
       };
       this.addInputListener( inputListener );
