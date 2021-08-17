@@ -534,7 +534,7 @@ class EnergySkateParkScreenView extends ScreenView {
     }
 
     this.resetAllButton.right = this.controlPanel.right;
-    this.returnSkaterButton.right = this.resetAllButton.left - 10;
+    this.returnSkaterButton.right = this.resetAllButton.left - 100;
 
     if ( this.showToolbox ) {
       this.toolboxPanel.top = this.controlPanel.bottom + 5;
