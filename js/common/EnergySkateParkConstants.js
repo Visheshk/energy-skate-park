@@ -101,7 +101,7 @@ const EnergySkateParkConstants = {
   MOON_GRAVITY: MOON_GRAVITY,
   JUPITER_GRAVITY: JUPITER_GRAVITY,
 
-  REFERENCE_HEIGHT_RANGE: new Range( 0, 8 ) // in meters
+  REFERENCE_HEIGHT_RANGE: new Range( 0, 5 ) // in meters
 };
 
 energySkatePark.register( 'EnergySkateParkConstants', EnergySkateParkConstants );

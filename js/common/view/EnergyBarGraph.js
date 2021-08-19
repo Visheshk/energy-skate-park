@@ -106,6 +106,7 @@ class EnergyBarGraph extends Node {
           const valueSign = energy < 0 ? -1 : 1;
           resultantEnergy = valueSign / scale; // the energy required to produce a bar with height of 1 view coordinate
         }
+        // console.log(skater.kineticEnergyProperty);
         return resultantEnergy;
       } );
     };
@@ -130,7 +131,7 @@ class EnergyBarGraph extends Node {
     this.barChartNode = new BarChartNode( [
       { entries: [ kineticEntry ], labelString: energyKineticString },
       { entries: [ potentialEntry ], labelString: energyPotentialString },
-      { entries: [ thermalEntry ], labelString: energyThermalString, labelNode: clearThermalButton },
+      // { entries: [ thermalEntry ], labelString: energyThermalString, labelNode: clearThermalButton },
       { entries: [ totalEntry ], labelString: energyTotalString }
     ], graphRangeProperty, {
       barLabelOptions: {

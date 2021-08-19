@@ -85,8 +85,12 @@ class SkaterNode extends Node {
       rightSkaterImageNode.visible = direction === Skater.Direction.RIGHT;
     } );
 
+    console.log(this);
+    console.log(this.width);
+    console.log(this.height);
     const imageWidth = this.width;
-    const imageHeight = this.height;
+    //@vishesh - added custom height for roller coaster image here, need to figure out how it's computed
+    const imageHeight = 97;
 
     // @private - Map from mass(kg) to the amount to scale the image
     const centerMassValue = skater.massRange.getCenter();
