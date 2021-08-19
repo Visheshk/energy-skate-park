@@ -22,8 +22,8 @@ import Track from './Track.js';
 const PARENT_TRACKS = [];
 
 // limiting bounds for dragging control points
-const END_BOUNDS_WIDTH = 2.5;
-const END_BOUNDS_HEIGHT = 4;
+const END_BOUNDS_WIDTH = 20;
+const END_BOUNDS_HEIGHT = 20;
 
 // the supported premade tracks, used in EnegySkateParkTrackSetModels
 const TrackType = Enumeration.byKeys( [ 'PARABOLA', 'SLOPE', 'DOUBLE_WELL', 'LOOP' ] );
@@ -93,7 +93,7 @@ const PremadeTracks = {
     const p3 = new Vector2( options.trackWidth / 2, options.trackHeight );
 
     const p1Bounds = createCenteredLimitBounds( p1, END_BOUNDS_WIDTH, END_BOUNDS_HEIGHT );
-    const p2Bounds = createBottomLimitBounds( p2, 5, 3 );
+    const p2Bounds = createBottomLimitBounds( p2, 30, 30 );
     const p3Bounds = createCenteredLimitBounds( p3, END_BOUNDS_WIDTH, END_BOUNDS_HEIGHT );
 
     return [

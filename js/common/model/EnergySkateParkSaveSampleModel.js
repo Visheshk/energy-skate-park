@@ -35,11 +35,11 @@ class EnergySkateParkSaveSampleModel extends EnergySkateParkModel {
       defaultSaveSamples: true,
 
       // {number} - the interval at which we save EnergySkateParkDataSamples, in seconds
-      saveSampleInterval: 0.1,
+      saveSampleInterval: 0.02,
 
       // {number} skater samples which are being removed will fade away at this rate every animation frame
       // like opacity = opacity * sampleFadeDecay
-      sampleFadeDecay: 0.95,
+      sampleFadeDecay: 1.95,
 
       // {number} - the maximum number of EnergySkateParkDataSamples saved by this model, to prevent from saving too many if we
       // run without encountering a case that clears old samples

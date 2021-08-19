@@ -92,11 +92,11 @@ class GraphsModel extends EnergySkateParkTrackSetModel {
       tracksConfigurable: tracksConfigurable,
 
       // interval at which we save skater samples
-      saveSampleInterval: 0.01,
+      saveSampleInterval: 0.003,
 
       // graph samples will fade more quickly, partly because it looks nicer, but mostly because
       // it is better for performance to have fewer transparent points
-      sampleFadeDecay: 0.5,
+      sampleFadeDecay: 2.5,
 
       // to prevent a memory leak if we run for a long time without clearing
       maxNumberOfSamples: 1000
