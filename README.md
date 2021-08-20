@@ -31,6 +31,7 @@ git clone https://github.com/phetsims/energy-skate-park.git
 git clone https://github.com/phetsims/griddle.git
 git clone https://github.com/phetsims/joist.git
 git clone https://github.com/phetsims/kite.git
+git clone https://github.com/phetsims/perennial.git perennial-alias
 git clone https://github.com/phetsims/phet-core.git
 git clone https://github.com/phetsims/phetcommon.git
 git clone https://github.com/phetsims/phetmarks.git
