@@ -122,6 +122,9 @@
   "skaterControls.restartSkater": {
     "value": "Restart Skater"
   },
+  "skaterControls.exportData": {
+    "value": "Export Data"
+  },
   "trackControls.stickToTrack": {
     "value": "Stick to Track"
   },

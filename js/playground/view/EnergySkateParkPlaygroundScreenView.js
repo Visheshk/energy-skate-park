@@ -15,6 +15,9 @@ import energySkatePark from '../../energySkatePark.js';
 import EnergySkateParkScreenView from '../../common/view/EnergySkateParkScreenView.js';
 import TrackToolboxPanel from '../../common/view/TrackToolboxPanel.js';
 
+import InspectedSampleHaloNode from '../../measure/view/InspectedSampleHaloNode.js';
+import SkaterPathSensorNode from '../../measure/view/SkaterPathSensorNode.js';
+
 class EnergySkateParkPlaygroundScreenView extends EnergySkateParkScreenView {
 
   /**
@@ -72,6 +75,18 @@ class EnergySkateParkPlaygroundScreenView extends EnergySkateParkScreenView {
     this.timeControlNode.left = this.modelViewTransform.modelToViewX( 0.5 );
     this.trackToolbox.right = this.modelViewTransform.modelToViewX( -0.5 );
     this.clearButton.right = this.trackToolbox.left - 10;
+
+    
+    // const inspectedSampleHaloNode = new InspectedSampleHaloNode( model.dataSamples, this.modelViewTransform );
+    // this.topLayer.addChild( inspectedSampleHaloNode );
+
+    // // @private - for layout
+    // this.pathSensor = new SkaterPathSensorNode( model.dataSamples, model.sensorProbePositionProperty, model.sensorBodyPositionProperty, model.availableModelBoundsProperty, this.modelViewTransform, this.controlPanel, {
+    //   tandem: tandem.createTandem( 'pathSensor' )
+    // } );
+
+    // this.topLayer.addChild( this.pathSensor );
+
   }
 
   /**

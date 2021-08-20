@@ -243,6 +243,8 @@ class Skater {
         phetioType: DerivedProperty.DerivedPropertyIO( BooleanIO )
       } );
 
+    this.energyList = [];
+
     // update energies whenever mass, gravity, or height changes so that energy distribution updates while the sim is paused
     Property.multilink( [ this.massProperty, this.referenceHeightProperty, this.gravityProperty ], ( mass, referenceHeight, gravity ) => {
       this.updateEnergy();
@@ -323,7 +325,7 @@ class Skater {
     // set the angle to zero first so that the optimization for SkaterNode.updatePosition is maintained, without
     // showing the skater at the wrong angle
     this.angleProperty.value = 0;
-
+    
     this.trackProperty.reset();
     this.parametricPositionProperty.reset();
     this.parametricSpeedProperty.reset();
@@ -365,6 +367,13 @@ class Skater {
     }
     this.positionProperty.set( this.startingPositionProperty.value.copy() );
     this.velocityProperty.value = new Vector2( 0, 0 );
+
+    console.log(this.energyList);
+    if (this.energyList.length > 10) {
+      this.fetchTest('http://localhost:3000/data', {"studentId": "test", "simId": "rc1", "dataList": this.energyList});
+      this.energyList = [];
+    }
+    
     this.clearThermal();
     this.updateEnergy();
     this.updatedEmitter.emit();
@@ -381,10 +390,36 @@ class Skater {
     this.kineticEnergyProperty.value = 0.5 * this.massProperty.value * this.velocityProperty.value.magnitudeSquared;
     this.potentialEnergyProperty.value = -this.massProperty.value * ( this.positionProperty.value.y - this.referenceHeightProperty.value ) * this.gravityProperty.value;
     this.totalEnergyProperty.value = this.kineticEnergyProperty.value + this.potentialEnergyProperty.value + this.thermalEnergyProperty.value;
+    this.energyList.push({
+      "kinetic": this.kineticEnergyProperty.value, 
+      "potential": this.potentialEnergyProperty.value, 
+      "total": this.totalEnergyProperty.value,
+      "time": new Date().getTime(),
+      "velocity": this.velocityProperty.value,
+      "position": this.positionProperty.value
 
+    });
+    if (this.energyList.length > 3000) {
+      this.energyList = this.energyList.slice(1);
+    }
     // Signal that energies have changed for coarse-grained listeners like PieChartNode that should not get updated
     // 3-4 times per times step
     this.energyChangedEmitter.emit();
+  }
+
+  fetchTest (url = '', data = {}) {
+    // console.log(JSON.stringify(data));
+    const response = fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: JSON.stringify(data)
+      // body: data
+    });      
+    // console.log(response);
+    return response;
   }
 
   /**

@@ -49,6 +49,7 @@ import TrackNode from './TrackNode.js';
 import VisibilityControlsPanel from './VisibilityControlsPanel.js';
 
 const controlsRestartSkaterString = energySkateParkStrings.skaterControls.restartSkater;
+const exportDataSkaterString = energySkateParkStrings.skaterControls.exportData;
 const propertiesSpeedString = energySkateParkStrings.speedometer.label;
 const speedometerMetersPerSecondPatternString = energySkateParkStrings.speedometer.metersPerSecondPattern;
 const measuringTapeUnitsString = energySkateParkStrings.measuringTape.units;
@@ -236,6 +237,27 @@ class EnergySkateParkScreenView extends ScreenView {
     // Disable the return skater button when the skater is already at his initial coordinates
     model.skater.movedProperty.linkAttribute( this.returnSkaterButton, 'enabled' );
     this.bottomLayer.addChild( this.returnSkaterButton );
+
+    /*
+    // The button to return the skater
+    this.exportDataButton = new RectangularPushButton( {
+      content: new Text( exportDataSkaterString, {
+        tandem: tandem.createTandem( 'exportDataTextNode' ),
+        maxWidth: 90,
+        font: EnergySkateParkConstants.CONTROL_LABEL_FONT
+      } ),
+      listener: model.returnSkater.bind( model ),
+      centerY: this.resetAllButton.centerY,
+      // X updated in layoutBounds since the reset all button can move horizontally
+      tandem: tandem.createTandem( 'expotDataButton' )
+    } );
+
+    // Disable the return skater button when the skater is already at his initial coordinates
+    model.skater.movedProperty.linkAttribute( this.exportDataButton, 'enabled' );
+    this.bottomLayer.addChild( this.exportDataButton );
+    */
+
+
 
     const gaugeRadius = 76;
 
