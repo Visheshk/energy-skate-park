@@ -1,0 +1,87 @@
+{
+  "comment": "# energy-skate-park 1.2.0-dev.0 Tue Aug 24 2021 00:56:50 GMT-0400 (Eastern Daylight Time)",
+  "assert": {
+    "sha": "f360fa1bd09a47b3c9e49cd90c8dddd136a13e0c",
+    "branch": "master"
+  },
+  "axon": {
+    "sha": "83d91fdcf97b9202e91e19dc2b3a2517e13bd862",
+    "branch": "master"
+  },
+  "brand": {
+    "sha": "0c723e76a7bad4344cb588c486ae41d0f7fc4995",
+    "branch": "master"
+  },
+  "chipper": {
+    "sha": "21f4c620b16059fc99f755d330f096f796c7c5e4",
+    "branch": "master"
+  },
+  "dot": {
+    "sha": "c63a40f4ec3f0c86260c4fe18a7708079925afe5",
+    "branch": "master"
+  },
+  "energy-skate-park": {
+    "sha": "b9164f11b09facb5edb9f8018fb5e5371ae8343e",
+    "branch": "master"
+  },
+  "griddle": {
+    "sha": "e6c59f1ada8ca26e592144bf4460956c2d16cecd",
+    "branch": "master"
+  },
+  "joist": {
+    "sha": "f66eb11fe4f8bb3087989dd612a5ae62e0871108",
+    "branch": "master"
+  },
+  "kite": {
+    "sha": "a5a45cba30bc83d0400d83f03c7e4ffe06d75501",
+    "branch": "master"
+  },
+  "phet-core": {
+    "sha": "9ab5d30df41530aeea92986485db49f539ae3158",
+    "branch": "master"
+  },
+  "phetcommon": {
+    "sha": "6c6d4186db1d5b0fa99a73c3f522499873bdafb0",
+    "branch": "master"
+  },
+  "phetmarks": {
+    "sha": "b5ba0da178ceb6a7af312ecf8c697ec9f7baa46f",
+    "branch": "master"
+  },
+  "query-string-machine": {
+    "sha": "b8a77992bf3943ce0555e80f6754f605af15538d",
+    "branch": "master"
+  },
+  "scenery": {
+    "sha": "cacb390e636c006c8947d9d07cc6a52d8f0540b9",
+    "branch": "master"
+  },
+  "scenery-phet": {
+    "sha": "ad556223e733176e4496c14fa91409f4d2ca4bfe",
+    "branch": "master"
+  },
+  "sherpa": {
+    "sha": "1ebf3dd9b655319cee86f83b7829dc7fd442681d",
+    "branch": "master"
+  },
+  "sun": {
+    "sha": "79c52d66e7938630322009e8458a03ce81492fc9",
+    "branch": "master"
+  },
+  "tambo": {
+    "sha": "6aed7e6a29842640fe99b6c3f516f3892020e2ad",
+    "branch": "master"
+  },
+  "tandem": {
+    "sha": "70251d5464e657a3dbd1f0839c0bd3801b59e9d5",
+    "branch": "master"
+  },
+  "twixt": {
+    "sha": "fb6e2a5fbfa99cce6b1397c191c3ef732200adc1",
+    "branch": "master"
+  },
+  "utterance-queue": {
+    "sha": "85150bac73bd8bb5fb112ecfe44a37d82892b371",
+    "branch": "master"
+  }
+}
