@@ -1,6 +1,6 @@
 {
   "energy-skate-park.title": {
-    "value": "Energy Skate Park"
+    "value": "Roller Coaster Design"
   },
   "physicalControls.gravityControls.gravity": {
     "value": "Gravity"
@@ -120,7 +120,7 @@
     "value": "Dog ({{value}} kg)"
   },
   "skaterControls.restartSkater": {
-    "value": "Restart Skater"
+    "value": "Restart Roller Coaster"
   },
   "skaterControls.exportData": {
     "value": "Export Data"

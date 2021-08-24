@@ -224,7 +224,7 @@ class EnergySkateParkScreenView extends ScreenView {
     this.returnSkaterButton = new RectangularPushButton( {
       content: new Text( controlsRestartSkaterString, {
         tandem: tandem.createTandem( 'restartSkaterTextNode' ),
-        maxWidth: 90,
+        maxWidth: 150,
         font: EnergySkateParkConstants.CONTROL_LABEL_FONT
       } ),
       listener: model.returnSkater.bind( model ),
@@ -254,8 +254,8 @@ class EnergySkateParkScreenView extends ScreenView {
     } );
 
     model.skater.movedProperty.linkAttribute( this.exportButton, 'enabled' );
-    this.bottomLayer.addChild( this.exportButton );
-
+    // this.bottomLayer.addChild( this.exportButton );
+    
 
 
 
