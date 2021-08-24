@@ -85,7 +85,7 @@ class EnergyChart extends XYCursorChartNode {
       gridNodeOptions: {
         majorLineOptions: {
           lineDash: [ 4, 4 ],
-          stroke: 'gray'
+          stroke: 'black'
         }
       },
 
@@ -130,6 +130,7 @@ class EnergyChart extends XYCursorChartNode {
       color: EnergySkateParkColorScheme.kineticEnergy,
       visibleProperty: model.kineticEnergyDataVisibleProperty
     }, seriesOptions ) );
+    console.log(model.kineticEnergyDataVisibleProperty);
     this.potentialEnergyDataSeries = new DynamicSeries( merge( {
       color: EnergySkateParkColorScheme.potentialEnergy,
       visibleProperty: model.potentialEnergyDataVisibleProperty
