@@ -23,10 +23,10 @@ const tandem = Tandem.ROOT;
 
 simLauncher.launch( () => {
   const screens = [
-    new IntroScreen( tandem.createTandem( 'introScreen' ) ),
+    // new IntroScreen( tandem.createTandem( 'introScreen' ) ),
     new MeasureScreen( tandem.createTandem( 'measureScreen' ) ),
-    new GraphsScreen( tandem.createTandem( 'graphsScreen' ) ),
-    new PlaygroundScreen( tandem.createTandem( 'playgroundScreen' ) )
+    // new GraphsScreen( tandem.createTandem( 'graphsScreen' ) ),
+    // new PlaygroundScreen( tandem.createTandem( 'playgroundScreen' ) )
   ];
 
   new EnergySkateParkSim( energySkateParkTitleString, screens, tandem, {
