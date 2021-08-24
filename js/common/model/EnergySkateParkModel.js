@@ -1494,7 +1494,11 @@ class EnergySkateParkModel extends PhetioObject {
     this.userControlledPropertySet.skaterControlledProperty.set( false );
   }
 
-
+  //TODO
+  exportData() {
+    this.skater.exportData();
+  } 
+  
   /**
    * Clear thermal energy from the model.
    * @public
