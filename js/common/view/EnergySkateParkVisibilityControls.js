@@ -50,7 +50,7 @@ class EnergySkateParkVisibilityControls extends VBox {
     options = merge( {
 
       // {boolean} - whether or not Checkboxes for these Properties are included in the controls
-      showPieChartCheckbox: true,
+      showPieChartCheckbox: false,
       showBarGraphCheckbox: false,
       showGridCheckbox: false,
       showSpeedCheckbox: true,

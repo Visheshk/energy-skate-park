@@ -39,7 +39,7 @@ class EnergySkateParkControlPanel extends Panel {
       showFrictionControls: true,
 
       // {boolean} whether or not gravity controls will be included in this control panel
-      showGravityControls: true,
+      showGravityControls: false,
 
       // {boolean} whether or not mass controls will be included in this control panel
       showMassControls: true,

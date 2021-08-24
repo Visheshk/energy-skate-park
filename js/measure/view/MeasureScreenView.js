@@ -30,9 +30,6 @@ class MeasureScreenView extends EnergySkateParkTrackSetScreenView {
         visibilityControlsOptions: {
           showStickToTrackCheckbox: true
         },
-        gravityControlsOptions: {
-          includeGravityComboBox: true
-        },
         showSkaterControls: false
       }
     } );
