@@ -267,6 +267,10 @@ const PremadeTracks = {
     const p5 = new Vector2( -innerLoopWidth / 2, innerLoopHeight );
     const p6 = new Vector2( innerLoopWidth / 2, trackBottom );
     const p7 = new Vector2( loopWidth / 2, trackTop );
+    const p8 = new Vector2( loopWidth / 2 + 1, trackTop );
+    const p9 = new Vector2( loopWidth / 2 + 2, trackTop );
+    const p10 = new Vector2( loopWidth / 2 + 3, trackTop );
+    const p11 = new Vector2( loopWidth / 2 + 4, trackTop );
 
     const p1Bounds = createRelativeSpaceBounds( p1, 50, 50, 50, 50 );
     const p2Bounds = createRelativeSpaceBounds( p2, 50, 50, 50, 50 );
@@ -312,7 +316,23 @@ const PremadeTracks = {
       model.controlPointGroup.createNextElement( p7.x, p7.y, {
         limitBounds: p7Bounds,
         phetioState: false
-      } )
+      } ),
+      model.controlPointGroup.createNextElement( p8.x, p8.y, {
+        limitBounds: p7Bounds,
+        phetioState: false
+      } ),
+      model.controlPointGroup.createNextElement( p9.x, p9.y, {
+        limitBounds: p7Bounds,
+        phetioState: false
+      } ),
+      model.controlPointGroup.createNextElement( p10.x, p10.y, {
+        limitBounds: p7Bounds,
+        phetioState: false
+      } ),
+      model.controlPointGroup.createNextElement( p11.x, p11.y, {
+        limitBounds: p7Bounds,
+        phetioState: false
+      } ),
     ];
   },
 
