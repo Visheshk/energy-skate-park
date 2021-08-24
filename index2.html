@@ -1,4 +1,54 @@
 <html>
 
-<iframe src="build/adapted-from-phet/energy-skate-park_en_adapted-from-phet.html" width="834" height="504"></iframe>
+<!-- <iframe src="build/adapted-from-phet/energy-skate-park_en_adapted-from-phet.html" width="834" height="504"></iframe> -->
+<iframe src="energy-skate-park_en.html" width="834" height="504"></iframe>
+
+<div id="gd"></div>
+<script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
+<script type="text/javascript">
+	function remoteCall() {
+		console.log("call call");
+	}
+
+	var trace1 = {
+	  x: [1, 2, 3, 4],
+	  y: [10, 15, 13, 17],
+	  mode: 'markers',
+	  type: 'scatter'
+	};
+
+	var trace2 = {
+	  x: [2, 3, 4, 5],
+	  y: [16, 5, 11, 9],
+	  mode: 'lines',
+	  type: 'scatter'
+	};
+
+	var locList = {
+	  x: [1, 2, 3, 4],
+	  y: [12, 9, 15, 12],
+	  mode: 'lines+markers',
+	  type: 'scatter'
+	};
+
+	var data = [trace1, trace2, locList];
+
+	Plotly.newPlot('gd', data);
+
+	
+	makeTrace = function (dl) {
+		console.log(dl.length);
+		locList["x"] = dl.map(a => {return a.position.x})
+		locList["y"] = dl.map(a => {return a.position.y})
+		// trace2["x"] = [2, 3, 4];
+		// trace2["y"] = [6, 7, 8];
+		var data = [locList];
+		Plotly.react('gd', data);
+	}
+
+		// makeTrace(msg["dataList"]);
+		
+		// console.log(JSON.parse(msg));
+	
+	</script>
 </html>
